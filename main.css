@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgba(255, 217, 136, 0.527);
+    padding: 20px;
+}
+
+button {
+    cursor: pointer;
+    margin-left: 35%;
+    padding: 5px;
+    border-radius: 7px;
+    background-color: rgb(32, 32, 32);
+    color: #fff;
+
+}
+
+input {
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+
+.message {
+    padding: 19px 60px;
+    position: fixed;
+    top: 20px;
+    right: 105px;
+    background-color: rgba(19, 236, 19, 0.808);
+    border-radius: 3px;
+    color: #fff;
+    animation: slidein 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.errorMessage {
+    padding: 19px 60px;
+    position: fixed;
+    top: 20px;
+    right: 105px;
+    background-color: rgba(250, 10, 10, 0.925);
+    border-radius: 3px;
+    color: #fff;
+    animation: slidein 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slidein {
+    0% {
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.message::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0px;
+    height: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: time 3s forwards;
+}
+
+@keyframes time {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
